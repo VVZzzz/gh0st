@@ -1,0 +1,80 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  StdAfx.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  CJ60Lib.cpp
+  CJCaption.cpp
+  CJControlBar.cpp
+  CJDockBar.cpp
+  CJDockContext.cpp
+  CJExplorerBar.cpp
+  CJFlatButton.cpp
+  CJFlatComboBox.cpp
+  CJFlatHeaderCtrl.cpp
+  CJFrameInfo.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjframeinfo.cpp(63): warning C4996: 'swscanf': This function or variable may be unsafe. Consider using swscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\wchar.h(823) : see declaration of 'swscanf'
+  CJFrameWnd.cpp
+  CJListCtrl.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistctrl.cpp(241): warning C4018: '<' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistctrl.cpp(245): warning C4018: '>' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistctrl.cpp(252): warning C4018: '>' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistctrl.cpp(257): warning C4018: '<' : signed/unsigned mismatch
+  CJListView.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistview.cpp(241): warning C4018: '<' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistview.cpp(245): warning C4018: '>' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistview.cpp(252): warning C4018: '>' : signed/unsigned mismatch
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjlistview.cpp(257): warning C4018: '<' : signed/unsigned mismatch
+  CJMDIFrameWnd.cpp
+  CJMiniDockFrameWnd.cpp
+  CJOutlookBar.cpp
+  CJPagerCtrl.cpp
+  CJSearchEdit.cpp
+  CJSizeDockBar.cpp
+  CJTabCtrlBar.cpp
+  Generating Code...
+  Compiling...
+  CJTabView.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\cjtabview.cpp(345): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(294) : see declaration of 'wcscpy'
+  CJToolBar.cpp
+  CoolBar.cpp
+  CoolMenu.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\coolmenu.cpp(745): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(323) : see declaration of 'wcsncpy'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\coolmenu.cpp(803): warning C4018: '<' : signed/unsigned mismatch
+  FixTB.cpp
+  FlatBar.cpp
+  Globals.cpp
+  HyperLink.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\hyperlink.cpp(364): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(294) : see declaration of 'wcscpy'
+  MenuBar.cpp
+  ModulVer.cpp
+  ShellPidl.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shellpidl.cpp(172): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shellpidl.cpp(177): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+  ShellTree.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shelltree.cpp(756): warning C4996: '_wsplitpath': This function or variable may be unsafe. Consider using _wsplitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\wchar.h(1001) : see declaration of '_wsplitpath'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shelltree.cpp(814): warning C4996: '_wsplitpath': This function or variable may be unsafe. Consider using _wsplitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\wchar.h(1001) : see declaration of '_wsplitpath'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shelltree.cpp(824): warning C4996: 'wcstok': This function or variable may be unsafe. Consider using wcstok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(330) : see declaration of 'wcstok'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shelltree.cpp(830): warning C4996: 'wcstok': This function or variable may be unsafe. Consider using wcstok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(330) : see declaration of 'wcstok'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shelltree.cpp(881): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\string.h(294) : see declaration of 'wcscpy'
+  SHFileInfo.cpp
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shfileinfo.cpp(65): warning C4996: '_wsplitpath': This function or variable may be unsafe. Consider using _wsplitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\wchar.h(1001) : see declaration of '_wsplitpath'
+f:\mycode\gh0st\unused\cj60lib\cj60lib\shfileinfo.cpp(72): warning C4996: '_wsplitpath': This function or variable may be unsafe. Consider using _wsplitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\microsoft visual studio 12.0\vc\include\wchar.h(1001) : see declaration of '_wsplitpath'
+  Subclass.cpp
+  Generating Code...
+CJ60Lib.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+.\CJ60Lib.def(4): warning LNK4017: DESCRIPTION statement not supported for the target platform; ignored
+     Creating library ../../Output/Debug/Lib/CJ60Libd.lib and object ../../Output/Debug/Lib/CJ60Libd.exp
+  CJ60Lib.vcxproj -> F:\mycode\Gh0st\Unused\CJ60Lib\CJ60Lib\..\..\Output\Debug\Bin\CJ60Libd.dll

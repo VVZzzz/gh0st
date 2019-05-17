@@ -1,0 +1,49 @@
+﻿Build started 2018/12/19 16:29:59.
+     1>Project "D:\mycode\Gh0st\Gh0st_Server_Server\Server.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (..\Output\Debug\Temp\) contains files shared from another project (Build_ServerExe.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SERVER_EXPORTS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"..\Output\Debug\Temp\Server.pch" /Fo"..\Output\Debug\Temp\\" /Fd"..\Output\Debug\Temp\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Common\Audio.cpp
+         Audio.cpp
+     1>d:\mycode\gh0st\common\audio.cpp(4): warning C4627: '#include "..\Gh0st_Client_Gh0st\StdAfx.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>d:\mycode\gh0st\common\audio.cpp(169): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SERVER_EXPORTS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\Output\Debug\Temp\\" /Fd"..\Output\Debug\Temp\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+     1>d:\mycode\gh0st\gh0st_server_server\common\login.h(32): warning C4101: 'pEnd' : unreferenced local variable
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(172): warning C4101: 'strServiceName' : unreferenced local variable
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(25): warning C4700: uninitialized local variable 'result' used
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(51): warning C4700: uninitialized local variable 'result' used
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(38): warning C4700: uninitialized local variable 'result' used
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(83): warning C4700: uninitialized local variable 'result' used
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(69): warning C4700: uninitialized local variable 'result' used
+     1>d:\mycode\gh0st\gh0st_server_server\dllmain.cpp(96): warning C4700: uninitialized local variable 'result' used
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Output\Debug\Bin\Server.dll" /INCREMENTAL /NOLOGO ../common/zlib/zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\Output\Debug\Bin\Server.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Output\Debug\Bin\Server.lib" /MACHINE:X86 /DLL ..\Output\Debug\Temp\Audio.obj
+         ..\Output\Debug\Temp\ClientSocket.obj
+         ..\Output\Debug\Temp\AudioManager.obj
+         ..\Output\Debug\Temp\Buffer.obj
+         ..\Output\Debug\Temp\Dialupass.obj
+         ..\Output\Debug\Temp\FileManager.obj
+         ..\Output\Debug\Temp\install.obj
+         ..\Output\Debug\Temp\KernelManager.obj
+         ..\Output\Debug\Temp\KeyboardManager.obj
+         ..\Output\Debug\Temp\Manager.obj
+         ..\Output\Debug\Temp\RegEditEx.obj
+         ..\Output\Debug\Temp\ScreenManager.obj
+         ..\Output\Debug\Temp\ScreenSpy.obj
+         ..\Output\Debug\Temp\ShellManager.obj
+         ..\Output\Debug\Temp\SystemManager.obj
+         ..\Output\Debug\Temp\until.obj
+         ..\Output\Debug\Temp\VideoCap.obj
+         ..\Output\Debug\Temp\VideoManager.obj
+         ..\Output\Debug\Temp\dllmain.obj
+         ..\Output\Debug\Temp\Server.obj
+         ..\Output\Debug\Temp\stdafx.obj
+            Creating library ..\Output\Debug\Bin\Server.lib and object ..\Output\Debug\Bin\Server.exp
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Server.vcxproj -> D:\mycode\Gh0st\Gh0st_Server_Server\..\Output\Debug\Bin\Server.dll
+     1>Done Building Project "D:\mycode\Gh0st\Gh0st_Server_Server\Server.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.09

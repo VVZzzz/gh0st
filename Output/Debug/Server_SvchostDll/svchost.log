@@ -1,0 +1,10 @@
+﻿Build started 2018/12/19 17:18:29.
+     1>Project "D:\mycode\Gh0stForMyBook\Gh0st_Server_Svchost\svchost.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (../Output/debug/Server_SvchostDll/) contains files shared from another project (Server_SvchostDll.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>Link:
+         svchost.vcxproj -> D:\mycode\Gh0stForMyBook\Gh0st_Server_Svchost\../Output/debug/bin/Svch0st.exe
+     1>Done Building Project "D:\mycode\Gh0stForMyBook\Gh0st_Server_Svchost\svchost.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05

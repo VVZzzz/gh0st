@@ -1,0 +1,32 @@
+﻿Build started 2018/12/19 16:29:08.
+     1>Project "D:\mycode\Gh0st\Gh0st_Build_Server\Gh0stServer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t- /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\Gh0stServer.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR"..\Output\Debug\Temp\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t- /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\Gh0stServer.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR"..\Output\Debug\Temp\\" /Gd /TP /analyze- /errorReport:prompt Gh0stServer.cpp Gh0stServerDlg.cpp
+         Gh0stServerDlg.cpp
+     1>d:\mycode\gh0st\gh0st_build_server\gh0stserverdlg.cpp(188): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\time.inl(112) : see declaration of 'localtime'
+     1>d:\mycode\gh0st\gh0st_build_server\gh0stserverdlg.cpp(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         Gh0stServer.cpp
+     1>d:\mycode\gh0st\gh0st_build_server\gh0stserver.cpp(50): warning C4996: 'CWinApp::Enable3dControls': CWinApp::Enable3dControls is no longer needed. You should remove this call.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\atlmfc\include\afxwin.h(5178) : see declaration of 'CWinApp::Enable3dControls'
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /nologo /fo"..\Output\Debug\Temp\Gh0stServer.res" Gh0stServer.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Output\Debug\Bin\BuildServer.exe" /INCREMENTAL /NOLOGO ws2_32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"..\Output\Debug\Bin\BuildServer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Output\Debug\Bin\BuildServer.lib" /MACHINE:X86 /SAFESEH ..\Output\Debug\Temp\Gh0stServer.res
+         .\Debug\Gh0stServer.obj
+         .\Debug\Gh0stServerDlg.obj
+         .\Debug\StdAfx.obj
+     1>Gh0stServer.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         Gh0stServer.vcxproj -> D:\mycode\Gh0st\Gh0st_Build_Server\..\Output\Debug\Bin\BuildServer.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o".\Debug\Gh0stServer.bsc" ..\Output\Debug\Temp\Gh0stServer.sbr ..\Output\Debug\Temp\Gh0stServerDlg.sbr ..\Output\Debug\Temp\StdAfx.sbr
+     1>Done Building Project "D:\mycode\Gh0st\Gh0st_Build_Server\Gh0stServer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.60

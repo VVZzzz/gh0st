@@ -1,0 +1,132 @@
+﻿Build started 2018/12/19 17:17:02.
+     1>Project "D:\mycode\Gh0stForMyBook\Gh0st_Client_Gh0st\gh0st.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (..\Output\Debug\Client_Gh0stExe\) contains files shared from another project (Client_Gh0stExe.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ICJ60lib/Include /I../common /Zi /nologo /W1 /WX- /Od /Oy- /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"..\Output\Debug\Client_Gh0stExe\\" /Fd"..\Output\Debug\Client_Gh0stExe\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\common\Audio.cpp AudioDlg.cpp BmpToAvi.cpp control\BtnST.cpp EncodingUtil.cpp include\Buffer.cpp include\CpuUsage.cpp CustomTabCtrl.cpp DDOS.cpp EnDeCode.cpp FileManagerDlg.cpp FileTransferModeDlg.cpp GENGXIN.cpp gh0st.cpp gh0stDoc.cpp gh0stView.cpp GUANYU.cpp control\HoverEdit.cpp IniFile.cpp InputDlg.cpp include\IOCPServer.cpp KeyBoardDlg.cpp LOGIN.cpp MainFrm.cpp ScreenSpyDlg.cpp SettingsView.cpp SEU_QQwry.cpp ShellDlg.cpp SplashScreenEx.cpp StdAfx.cpp SystemDlg.cpp TabSDIFrameWnd.cpp ThemeUtil.cpp TrayIcon.cpp TrueColorToolBar.cpp WebCamDlg.cpp control\WinXPButtonST.cpp
+         Audio.cpp
+         Automatically linking with CJ60Libd.dll
+         AudioDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         BmpToAvi.cpp
+         Automatically linking with CJ60Libd.dll
+         BtnST.cpp
+         Automatically linking with CJ60Libd.dll
+         EncodingUtil.cpp
+         Automatically linking with CJ60Libd.dll
+         Buffer.cpp
+         Automatically linking with CJ60Libd.dll
+         CpuUsage.cpp
+         Automatically linking with CJ60Libd.dll
+         CustomTabCtrl.cpp
+         Automatically linking with CJ60Libd.dll
+         DDOS.cpp
+         Automatically linking with CJ60Libd.dll
+         EnDeCode.cpp
+         Automatically linking with CJ60Libd.dll
+         FileManagerDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         FileTransferModeDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         GENGXIN.cpp
+         Automatically linking with CJ60Libd.dll
+         gh0st.cpp
+         Automatically linking with CJ60Libd.dll
+         gh0stDoc.cpp
+         Automatically linking with CJ60Libd.dll
+         gh0stView.cpp
+         Automatically linking with CJ60Libd.dll
+         GUANYU.cpp
+         Automatically linking with CJ60Libd.dll
+         HoverEdit.cpp
+         Automatically linking with CJ60Libd.dll
+         IniFile.cpp
+         Automatically linking with CJ60Libd.dll
+         InputDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         Generating Code...
+         Compiling...
+         IOCPServer.cpp
+         Automatically linking with CJ60Libd.dll
+         KeyBoardDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         LOGIN.cpp
+         Automatically linking with CJ60Libd.dll
+         MainFrm.cpp
+         Automatically linking with CJ60Libd.dll
+         ScreenSpyDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         SettingsView.cpp
+         Automatically linking with CJ60Libd.dll
+         SEU_QQwry.cpp
+         Automatically linking with CJ60Libd.dll
+         ShellDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         SplashScreenEx.cpp
+         Automatically linking with CJ60Libd.dll
+         StdAfx.cpp
+         Automatically linking with CJ60Libd.dll
+         SystemDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         TabSDIFrameWnd.cpp
+         Automatically linking with CJ60Libd.dll
+         ThemeUtil.cpp
+         Automatically linking with CJ60Libd.dll
+         TrayIcon.cpp
+         Automatically linking with CJ60Libd.dll
+         TrueColorToolBar.cpp
+         Automatically linking with CJ60Libd.dll
+         WebCamDlg.cpp
+         Automatically linking with CJ60Libd.dll
+         WinXPButtonST.cpp
+         Automatically linking with CJ60Libd.dll
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0409" /nologo /fo"..\Output\Debug\Client_Gh0stExe\gh0st.res" gh0st.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Output\Debug\bin\Gh0st.exe" /NOLOGO /LIBPATH:../common/zlib/zlib.lib /LIBPATH:..\Output\Release\Lib ../common/zlib/zlib.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"..\Output\Debug\bin\Gh0st.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Output\Debug\bin\Gh0st.lib" /MACHINE:X86 /SAFESEH:NO ..\Output\Debug\Client_Gh0stExe\gh0st.res
+         ..\Output\Debug\Client_Gh0stExe\Audio.obj
+         ..\Output\Debug\Client_Gh0stExe\AudioDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\BmpToAvi.obj
+         ..\Output\Debug\Client_Gh0stExe\BtnST.obj
+         ..\Output\Debug\Client_Gh0stExe\EncodingUtil.obj
+         ..\Output\Debug\Client_Gh0stExe\Buffer.obj
+         ..\Output\Debug\Client_Gh0stExe\CpuUsage.obj
+         ..\Output\Debug\Client_Gh0stExe\CustomTabCtrl.obj
+         ..\Output\Debug\Client_Gh0stExe\DDOS.obj
+         ..\Output\Debug\Client_Gh0stExe\EnDeCode.obj
+         ..\Output\Debug\Client_Gh0stExe\FileManagerDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\FileTransferModeDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\GENGXIN.obj
+         ..\Output\Debug\Client_Gh0stExe\gh0st.obj
+         ..\Output\Debug\Client_Gh0stExe\gh0stDoc.obj
+         ..\Output\Debug\Client_Gh0stExe\gh0stView.obj
+         ..\Output\Debug\Client_Gh0stExe\GUANYU.obj
+         ..\Output\Debug\Client_Gh0stExe\HoverEdit.obj
+         ..\Output\Debug\Client_Gh0stExe\IniFile.obj
+         ..\Output\Debug\Client_Gh0stExe\InputDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\IOCPServer.obj
+         ..\Output\Debug\Client_Gh0stExe\KeyBoardDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\LOGIN.obj
+         ..\Output\Debug\Client_Gh0stExe\MainFrm.obj
+         ..\Output\Debug\Client_Gh0stExe\ScreenSpyDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\SettingsView.obj
+         ..\Output\Debug\Client_Gh0stExe\SEU_QQwry.obj
+         ..\Output\Debug\Client_Gh0stExe\ShellDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\SplashScreenEx.obj
+         ..\Output\Debug\Client_Gh0stExe\StdAfx.obj
+         ..\Output\Debug\Client_Gh0stExe\SystemDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\TabSDIFrameWnd.obj
+         ..\Output\Debug\Client_Gh0stExe\ThemeUtil.obj
+         ..\Output\Debug\Client_Gh0stExe\TrayIcon.obj
+         ..\Output\Debug\Client_Gh0stExe\TrueColorToolBar.obj
+         ..\Output\Debug\Client_Gh0stExe\WebCamDlg.obj
+         ..\Output\Debug\Client_Gh0stExe\WinXPButtonST.obj
+         LINK : ..\Output\Debug\bin\Gh0st.exe not found or not built by the last incremental link; performing full link
+     1>LINK : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         gh0st.vcxproj -> D:\mycode\Gh0stForMyBook\Gh0st_Client_Gh0st\..\Output\Debug\bin\Gh0st.exe
+     1>Done Building Project "D:\mycode\Gh0stForMyBook\Gh0st_Client_Gh0st\gh0st.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:37.51
