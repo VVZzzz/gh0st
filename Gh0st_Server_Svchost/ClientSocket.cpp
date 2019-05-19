@@ -24,6 +24,7 @@ CClientSocket::CClientSocket()
     GetForegroundWindow();
 
     WSADATA wsaData;
+	//Socket程序库的版本,用MAKEWORD宏
     WSAStartup(MAKEWORD(2, 2), &wsaData);
     bSendLogin = true;
     closesocket(NULL);

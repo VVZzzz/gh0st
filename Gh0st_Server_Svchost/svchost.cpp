@@ -149,6 +149,7 @@ DWORD WINAPI main(char *lpServiceName)
     // http://hi.baidu.com/zxhouse/blog/item/dc651c90fc7a398fa977a484.html
 #endif
     // 告诉操作系统:如果没有找到CD/floppy disc,不要弹窗口吓人
+	//系统不显示critical-error-handler消息框。 相反，系统将错误发送到调用进程。
     SetErrorMode(SEM_FAILCRITICALERRORS);
     TCHAR	*lpszHost = TEXT("127.0.0.1");
     //TCHAR	*lpszHost = TEXT("10.32.26.125");
