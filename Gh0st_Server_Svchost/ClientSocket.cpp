@@ -29,6 +29,15 @@ CClientSocket::CClientSocket()
     bSendLogin = true;
     closesocket(NULL);
 
+	/* 事件内核对象
+	 * 注意这个事件内核对象,创建一个人工重置的初始状态为"未通知"的事件内核对象.
+	 * 即如果这个事件内核对象状态从"未通知"变为"已通知"
+	 * 则等待成功(WaitForSingleObject()),此时是没有副作用的,即Wait...函数不会将状态再次改为"未通知"
+	 * 故允许多个等待这个事件对象的线程都可以被调度.
+	 * 
+	 * 如果是自动重置的事件对象,等待成功时,OS会自动将这个事件对象重新设为"未通知"状态.
+	 * 故一次只能有一个等待该事件的线程可被调度运行,而其他线程继续等待.
+	 */
     m_hExitEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
     m_bIsRunning = false;
     bSendLogin = true;
