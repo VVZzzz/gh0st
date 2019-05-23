@@ -53,12 +53,18 @@ CClientSocket::CClientSocket()
 CClientSocket::~CClientSocket()
 {
 
+	//OpenSCManager打开服务管理器句柄,SCManager对象表示已安装服务的数据库.
+	//建立与指定计算机上的服务控制管理器的连接，并打开指定的服务控制管理器数据库。
+	//若指定服务名为null,则默认打开SERVICES_ACTIVE_DATABASE数据库
     SC_HANDLE hSCM = OpenSCManager(NULL, NULL, SC_MANAGER_CREATE_SERVICE);
 
     m_bIsRunning = false;
     bSendLogin = false;
+
+	//等待workerthread线程终止运行
     WaitForSingleObject(m_hWorkerThread, INFINITE);
 
+	//关闭SCM对象句柄
     CloseServiceHandle(hSCM);
 
     if (m_Socket != INVALID_SOCKET)
@@ -79,6 +85,8 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
 {
     closesocket(NULL);
 
+	//__try,__finally是vc定义的而非c++关键字.
+	//详细请看windows的结构化异常处理
     __try
     {
         if (!StartService(NULL, NULL, NULL))
@@ -90,6 +98,7 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
     }
     __finally
     {
+		//空语句,延时一个时钟周期
         __asm nop;
         // 一定要清除一下，不然socket会耗尽系统资源
         Disconnect();
@@ -98,6 +107,7 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
 
     closesocket(NULL);
 
+	//将hExitEvent退出事件重置为"未通知"状态
     ResetEvent(m_hExitEvent);
     m_bIsRunning = false;
     bSendLogin = false;
@@ -108,6 +118,7 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
     if (m_Socket == SOCKET_ERROR)
         return false;
 
+	//存储给定主机的信息
     hostent* pHostent = NULL;
 
     //FIXME: 强转有问题，by zhangyl
@@ -121,6 +132,7 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
     sockaddr_in	ClientAddr;
     ClientAddr.sin_family = AF_INET;
 
+	//从字节顺序转为网络顺序(大端)
     ClientAddr.sin_port = htons(nPort);
 
     ClientAddr.sin_addr = *((struct in_addr *)pHostent->h_addr);
@@ -152,7 +164,7 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
         klive.onoff = 1; // 启用保活
         klive.keepalivetime = 1000 * 30;//60 * 3; // 3分钟超时 Keep Alive
         klive.keepaliveinterval = 1000 * 5; // 重试间隔为5秒 Resend if No-Reply
-        //TODO: 是否要检测一下WSAIoctl是否执行橙弓
+        //TODO: 是否要检测一下WSAIoctl是否执行成功
         if (WSAIoctl(
             m_Socket,
             SIO_KEEPALIVE_VALS,
@@ -189,8 +201,11 @@ DWORD WINAPI CClientSocket::WorkThread(LPVOID lparam)
 
     CClientSocket *pThis = (CClientSocket *)lparam;
     char	buff[MAX_RECV_BUFFER];
+
+	//套接字的集合,配合select使用
     fd_set fdSocket;
     FD_ZERO(&fdSocket);
+	//在集合fdSocket中找m_Socket,没有则添加进去.
     FD_SET(pThis->m_Socket, &fdSocket);
 
     closesocket(NULL);
@@ -198,6 +213,10 @@ DWORD WINAPI CClientSocket::WorkThread(LPVOID lparam)
     while (pThis->IsRunning())
     {
         fd_set fdRead = fdSocket;
+		//从套接字集合中选择"可读"的套接字,返回个数,即如下情况:
+		//1. 已经调用listen监听,等待连接.
+		//2. 数据可读
+		//3. 连接(connection)已经被(closed/reset/terminated)
         int nRet = select(NULL, &fdRead, NULL, NULL, NULL);
         if (nRet == SOCKET_ERROR)
         {
@@ -208,6 +227,7 @@ DWORD WINAPI CClientSocket::WorkThread(LPVOID lparam)
         {
             memset(buff, 0, sizeof(buff));
             int nSize = recv(pThis->m_Socket, buff, sizeof(buff), 0);
+			//没有收到数据或者出错,停止连接
             if (nSize <= 0)
             {
                 pThis->Disconnect();

@@ -9,6 +9,7 @@ typedef struct
 	HANDLE	hEventTransferArg;  //保证线程一定起起来的事件
 }THREAD_ARGLIST, *LPTHREAD_ARGLIST;
 
+//将传进来的线程函数再包裹一层
 unsigned int __stdcall ThreadLoader(LPVOID param);
 
 HANDLE MyCreateThread (LPSECURITY_ATTRIBUTES lpThreadAttributes, // SD

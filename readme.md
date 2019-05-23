@@ -11,4 +11,6 @@
 这个类有几点值得注意的地方:  
 - 用```CRITICAL_SECTION```即临界区,去保护这个```buffer```.同一时刻,只能有1个线程去读,写,访问这个```buffer```.
 - 由于可能有多个**进程**,故```buffer```中的分配内存等都是分配的虚拟内存即虚拟地址空间.即用```VirtualAlloc()```和```VirtualFree()```.
+6. ```ClientSocket```中:
+   ```connect```方法: 有一句开启服务,但开启服务管理器的句柄为NULL.```StartService(NULL, NULL, NULL)``` ?
             

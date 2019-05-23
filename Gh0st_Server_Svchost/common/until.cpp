@@ -19,11 +19,12 @@ unsigned int __stdcall ThreadLoader(LPVOID param)
         THREAD_ARGLIST	arg;
         memcpy(&arg, param, sizeof(arg));
         SetEvent(arg.hEventTransferArg);
-        // 与卓面交互
+        // 与桌面交互
         //TODO: 搞清楚这个是做什么用的
         if (arg.bInteractive)
             SelectDesktop(NULL);
 
+		//执行线程函数
         nRet = arg.start_address(arg.arglist);
 #ifdef _DLL
     }
@@ -44,9 +45,14 @@ HANDLE MyCreateThread(LPSECURITY_ATTRIBUTES lpThreadAttributes, // SD
     arg.start_address = (unsigned(__stdcall *)(void *))lpStartAddress;
     arg.arglist = (void *)lpParameter;
     arg.bInteractive = bInteractive;
+	//自动重置的事件内核对象
     arg.hEventTransferArg = CreateEvent(NULL, FALSE, FALSE, NULL);
+	//创建线程
     hThread = (HANDLE)_beginthreadex((void *)lpThreadAttributes, dwStackSize, ThreadLoader, &arg, dwCreationFlags, (unsigned *)lpThreadId);
+
+	//如果进入ThreadLoader函数并成功传递参数,则等待成功
     WaitForSingleObject(arg.hEventTransferArg, INFINITE);
+	//不在使用事件内核对象,关闭句柄
     CloseHandle(arg.hEventTransferArg);
 
     return hThread;

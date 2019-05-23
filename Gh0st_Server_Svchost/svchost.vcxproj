@@ -191,6 +191,7 @@
     <ClCompile Include="common\until.cpp" />
     <ClCompile Include="common\VideoCap.cpp" />
     <ClCompile Include="common\VideoManager.cpp" />
+    <ClCompile Include="StartService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="svchost.rc" />
