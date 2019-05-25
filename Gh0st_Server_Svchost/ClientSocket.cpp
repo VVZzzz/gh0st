@@ -143,7 +143,6 @@ bool CClientSocket::Connect(LPCTSTR lpszHost, UINT nPort)
     // The Nagle algorithm is disabled if the TCP_NODELAY option is enabled 
     //   const char chOpt = 1;
     // 	int nErr = setsockopt(m_Socket, IPPROTO_TCP, TCP_NODELAY, &chOpt, sizeof(char));
-
     // 验证socks5服务器
     //	if (m_nProxyType == PROXY_SOCKS_VER5 && !ConnectProxyServer(lpszHost, nPort))
     //	{
@@ -346,6 +345,8 @@ void CClientSocket::Disconnect()
     // If we're supposed to abort the connection, set the linger value
     // on the socket to 0.
     //
+
+	//设置TCP关闭连接时,直接丢弃缓冲区的包,发送RST包进而关闭连接.
     LINGER lingerStruct;
     lingerStruct.l_onoff = 1;
     lingerStruct.l_linger = 0;
