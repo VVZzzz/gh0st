@@ -358,6 +358,7 @@ void CClientSocket::Disconnect()
     //see: http://blog.csdn.net/ithzhang/article/details/8316171
     CancelIo((HANDLE)m_Socket);
     CloseServiceHandle(hSCM);
+	//互锁原子函数
     InterlockedExchange((LPLONG)&m_bIsRunning, false);
     InterlockedExchange((LPLONG)&bSendLogin, false);
 
@@ -365,6 +366,7 @@ void CClientSocket::Disconnect()
     CKeyboardManager::Myclosesocket(m_Socket);
 
 
+	//设置退出事件为"已通知"状态
     SetEvent(m_hExitEvent);
 
     m_Socket = INVALID_SOCKET;

@@ -16,6 +16,7 @@ VOID __stdcall DoStartSvc()
     DWORD dwStartTickCount;
     DWORD dwWaitTime;
     DWORD dwBytesNeeded;
+    LPCWSTR szSVcName = TEXT("StartService");
 
     // Get a handle to the SCM database. 
  
@@ -34,7 +35,7 @@ VOID __stdcall DoStartSvc()
 
     schService = OpenService( 
         schSCManager,         // SCM database 
-        szSvcName,            // name of service 
+        szSVcName,            // name of service 
         SERVICE_ALL_ACCESS);  // full access 
  
     if (schService == NULL)

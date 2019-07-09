@@ -61,9 +61,6 @@
     <ClCompile Include="common\EncodingUtil.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StartService.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\Audio.h">
